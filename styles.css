@@ -18,3 +18,55 @@
 .visual-rogue{--glow:#e6c88d;background:linear-gradient(135deg,#3b3829,#202a26)}
 .visual-library{--glow:#92d6be;background:linear-gradient(135deg,#1e4039,#182723)}
 @media(max-width:460px){.visual-work,.work-featured .visual-work{min-height:220px;padding:24px}.visual-card-title{font-size:23px}.work-featured .visual-card-title{font-size:33px}.visual-large-number{font-size:50px}}
+
+/* Winter introduction: a quiet, personal opening before the portfolio. */
+.topbar{background:rgba(247,249,249,.95);border-color:#dce5e8}
+.topbar .brand{color:#344d5d;font-weight:600}
+.topbar .brand-mark{color:#647f91;border-color:#a6bac6}
+.topbar .brand-dot{color:#b38767}
+.topbar nav a,.topbar .top-contact{color:#536b79}
+.topbar nav a:hover,.topbar .top-contact:hover{color:#243f50}
+.topbar .top-contact span{color:#956c4f}
+.hero-scene{color:#304959;background:radial-gradient(ellipse at 85% 85%,#f5e9db88,transparent 48%),linear-gradient(125deg,#f8faf9,#edf3f6 65%,#f3f5f4);border-bottom:1px solid #ccd9df}
+.hero-scene .hero{min-height:690px;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:64px;padding-bottom:90px}
+.hero-scene .eyebrow{color:#607b8d;font-family:var(--sans);font-size:11px;letter-spacing:.12em;flex-wrap:wrap}
+.hero-scene .eyebrow-line{background:#acbec9;width:28px}
+.hero-scene .status-dot{background:#a9bfce;box-shadow:none}
+.hero-scene h1{font-family:"Songti SC","STSong","SimSun",serif;font-size:clamp(43px,4.8vw,67px);font-weight:400;line-height:1.5;letter-spacing:.04em;margin:25px 0 21px}
+.hero-scene h1 em{color:#6c879a}
+.hero-scene .hero-lede{color:#526977;font-size:14px;line-height:2.15}
+.hero-scene .hero-lede strong{color:#344f61;font-weight:600}
+.hero-scene .hero-actions{gap:28px;margin-top:29px}
+.hero-scene .button-primary{background:#506d80;color:#fff;border-radius:4px;padding:13px 23px;font-weight:500;box-shadow:0 5px 16px #506d8015}
+.hero-scene .button-primary:hover{background:#3d5b6f}
+.hero-scene .text-link{color:#526d7d;border-color:#becbd2}
+.hero-scene .text-link span{color:#956c4f}
+.name-note{font-size:11px;line-height:1.9;color:#647888;margin:39px 0 0;max-width:370px}
+.name-note span{color:#809daf;margin-right:7px;font-size:15px}
+.hero-scene .hero-index{color:#657d8a;bottom:27px}
+.hero-scene .scroll-line{background:#a3b9c6}
+.winter-card{width:100%;max-width:400px;justify-self:end;margin:0;padding:17px;background:#fbfcfa;border:1px solid #dae3e5;border-radius:150px 150px 5px 5px;box-shadow:0 20px 55px #49627212;transform:rotate(2deg)}
+.winter-card-heading{display:flex;justify-content:center;gap:12px;align-items:center;padding:19px 0 16px;color:#647f90;font-size:10px;letter-spacing:.16em}
+.winter-card-heading span:last-child{font:8px var(--mono);letter-spacing:.05em;color:#6e818b}
+.winter-landscape{width:100%;height:auto;display:block;border-radius:125px 125px 2px 2px}
+.winter-card figcaption{display:flex;align-items:center;justify-content:space-between;padding:19px 9px 3px;color:#607886;font-family:"Songti SC","STSong","SimSun",serif;font-size:13px;line-height:1.9;letter-spacing:.13em}
+.winter-seal{padding:5px 8px;border:1px solid #b79174;border-radius:2px;color:#987051;font-size:12px;line-height:1.4;transform:rotate(-5deg)}
+a:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+@media(max-width:800px){
+  .hero-scene .hero{grid-template-columns:1fr;gap:37px;padding-top:55px;padding-bottom:76px;min-height:0}
+  .hero-scene h1{font-size:clamp(42px,7.5vw,61px);margin-top:23px}
+  .winter-card{max-width:320px;justify-self:center;transform:rotate(1deg)}
+  .name-note{margin-top:27px}
+}
+@media(max-width:460px){
+  .hero-scene .hero{padding-top:41px;gap:31px}
+  .hero-scene h1{font-size:clamp(32px,9.3vw,43px);letter-spacing:.025em}
+  .hero-scene .eyebrow{font-size:10px;gap:8px}
+  .hero-scene .hero-lede{font-size:13px}
+  .hero-scene .desktop-only{display:none}
+  .hero-scene .hero-actions{gap:22px}
+  .name-note{font-size:10px}
+  .winter-card{max-width:280px;padding:13px}
+  .winter-card-heading{gap:9px;font-size:9px}
+  .winter-card figcaption{font-size:12px;padding-top:15px}
+}

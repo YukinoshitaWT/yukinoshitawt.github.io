@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101a1a">
+  <meta name="theme-color" content="#f3f6f7">
   <meta name="description" content="战斗策划作品集：从机制拆解到配置验证，让每个想法都能进入战斗。">
   <title>暖雪之下｜战斗策划作品集</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=winter-1">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -21,24 +21,45 @@
   </header>
 
   <main id="home">
-    <section class="hero wrap">
+    <div class="hero-scene">
+    <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="status-dot"></span> GAME COMBAT DESIGNER <span class="eyebrow-line"></span> 作品集 2026</div>
-        <h1>让战斗设计，<br><em>落地成体验。</em></h1>
-        <p class="hero-lede">你好，我是 <strong>暖雪之下</strong>，一名战斗策划。<br>关注机制、数值与表现如何在同一条链路里协作，<br class="desktop-only">把想法变成玩家能感受到的战斗瞬间。</p>
+        <div class="eyebrow"><span class="status-dot"></span> 暖雪之下的个人主页 <span class="eyebrow-line"></span> 2026</div>
+        <h1 id="hero-title">雪落之处，<br><em>想法慢慢生长。</em></h1>
+        <p class="hero-lede">你好，我是 <strong>暖雪之下</strong>，一名战斗策划。<br>在这里，记录我对游戏的观察、拆解与设计，<br class="desktop-only">也把想法一步步做成可以体验的作品。</p>
         <div class="hero-actions"><a class="button button-primary" href="#work">查看作品 <span>↓</span></a><a class="text-link" href="#about">认识我 <span>↗</span></a></div>
-        <div class="hero-meta"><span>BASE IN CHINA</span><span class="meta-sep">/</span><span>OPEN TO OPPORTUNITIES</span></div>
+        <p class="name-note"><span aria-hidden="true">❄</span> 昵称的灵感，来自我喜欢的角色——雪之下雪乃。</p>
       </div>
-      <div class="hero-art" aria-label="战斗时间轴与技能节点抽象图">
-        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
-        <div class="art-cross cross-a"></div><div class="art-cross cross-b"></div>
-        <div class="art-core"><span class="core-glyph">✳</span><span class="core-label">COMBAT<br>SYSTEM</span></div>
-        <div class="art-node node-a"><b>01</b><span>机制</span></div><div class="art-node node-b"><b>02</b><span>配置</span></div><div class="art-node node-c"><b>03</b><span>验证</span></div>
-        <span class="art-coordinate coord-a">35° 41′ N</span><span class="art-coordinate coord-b">DESIGN / PLAY / ITERATE</span>
-        <div class="art-caption"><span class="caption-bar"></span><span>从需求到实机的设计闭环</span></div>
-      </div>
+      <figure class="winter-card">
+        <div class="winter-card-heading"><span>冬日来信</span><span>NOTES IN THE SNOW</span></div>
+        <svg class="winter-landscape" viewBox="0 0 440 430" role="img" aria-labelledby="winter-title">
+          <title id="winter-title">飘雪的冬日，树枝旁一扇透出暖光的窗</title>
+          <defs>
+            <linearGradient id="winter-sky" x2="0" y2="1"><stop stop-color="#c9dbe5"/><stop offset="1" stop-color="#edf2f3"/></linearGradient>
+            <radialGradient id="window-light"><stop stop-color="#ffe4b7" stop-opacity=".85"/><stop offset="1" stop-color="#ffe4b7" stop-opacity="0"/></radialGradient>
+            <linearGradient id="warm-window" x2="0" y2="1"><stop stop-color="#f6d7a6"/><stop offset="1" stop-color="#fff0d8"/></linearGradient>
+          </defs>
+          <path fill="url(#winter-sky)" d="M0 0h440v430H0z"/>
+          <circle cx="323" cy="95" r="38" fill="#f8f8f1" opacity=".8"/>
+          <path d="M0 298Q110 239 234 285T440 270V430H0Z" fill="#d9e5e9"/>
+          <path d="M0 337Q140 290 260 323T440 305V430H0Z" fill="#edf3f4"/>
+          <circle cx="260" cy="272" r="132" fill="url(#window-light)"/>
+          <path d="M191 332V204Q191 176 221 176H289Q319 176 319 204V332" fill="#f7f8f4" stroke="#a3b6bf" stroke-width="3"/>
+          <path d="M204 319V206Q204 190 221 190H289Q306 190 306 206V319Z" fill="url(#warm-window)"/>
+          <path d="M255 191V319M204 252H306" stroke="#c1bbb0" stroke-width="4"/>
+          <path d="M183 334H327" stroke="#b0bfc5" stroke-width="6" stroke-linecap="round"/>
+          <g fill="none" stroke="#7c96a3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M72 358Q109 235 93 86M95 163L142 122L156 78M100 223L55 179L41 132M91 289L155 248L173 209M141 123L174 118M56 180L65 153M154 248L184 251"/>
+          </g>
+          <g fill="none" stroke="#f8fbfc" stroke-width="6" stroke-linecap="round"><path d="M103 156L139 125M58 183L80 204M106 282L146 257"/></g>
+          <path d="M0 371Q82 346 166 365T330 359T440 350V430H0Z" fill="#fafbf8"/>
+          <g class="snow-specks" fill="#fff"><circle cx="43" cy="69" r="2.5"/><circle cx="175" cy="41" r="2"/><circle cx="233" cy="102" r="3"/><circle cx="373" cy="161" r="2.5"/><circle cx="59" cy="261" r="2"/><circle cx="163" cy="188" r="3"/><circle cx="346" cy="291" r="2"/><circle cx="396" cy="335" r="3"/><circle cx="122" cy="314" r="2.5"/><circle cx="296" cy="43" r="2"/><circle cx="402" cy="58" r="2"/></g>
+        </svg>
+        <figcaption><span>在安静的雪色里，<br>留一点热爱的位置。</span><span class="winter-seal" aria-hidden="true">暖<br>雪</span></figcaption>
+      </figure>
       <div class="hero-index"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 — 04</span></div>
     </section>
+    </div>
 
     <section class="signal-strip"><div class="wrap signal-inner"><span class="signal-label">DESIGN FOCUS</span><div class="signal-item"><b>01</b>技能机制拆解</div><div class="signal-item"><b>02</b>配置逻辑梳理</div><div class="signal-item"><b>03</b>实机表现验证</div><div class="signal-item"><b>04</b>跨职能协作</div></div></section>
 
