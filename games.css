@@ -1,0 +1,35 @@
+.games-intro-scene{background:radial-gradient(ellipse at 85% 60%,#e0eaf080,transparent 55%),linear-gradient(125deg,#f8faf9,#edf3f6 65%,#f3f5f4)}
+.games-intro{padding-block:44px 60px}
+.games-back{display:inline-block;color:#6b8190;text-decoration:none;font-size:11px;margin-bottom:44px}
+.games-intro h1{font-family:var(--serif);font-weight:400;letter-spacing:.025em;font-size:clamp(32px,4.7vw,58px);line-height:1.55;margin:22px 0}
+.games-intro h1 em{color:#6c879a}
+.games-intro>p{color:var(--muted);font-size:14px;line-height:2}
+.games-chapters{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.games-chapters a{display:flex;align-items:center;gap:30px;padding:10px 16px;color:#526d7d;border:1px solid #d4e0e6;border-radius:4px;text-decoration:none;font-size:12px;background:#ffffff50;transition:background .2s}
+.games-chapters a:hover{background:#fff}
+.games-chapters span{color:#91a6b3}
+.game-chapter{padding-top:70px;scroll-margin-top:95px}
+.game-chapter-heading{display:flex;align-items:center;gap:22px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.game-chapter-number{font:32px var(--mono);color:#9db2bf}
+.game-chapter-heading .eyebrow{font-size:9px;letter-spacing:.12em}
+.game-chapter-heading h2{font-family:var(--serif);font-size:29px;letter-spacing:.04em;font-weight:400;margin:5px 0 0}
+.game-chapter-heading>p{margin:0 0 3px auto;align-self:end;color:#738894;font-size:12px}
+.game-list{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
+.game-entry{padding:28px 30px;background:#fcfdfb;border:1px solid #dde5e8;border-radius:6px}
+.game-entry-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:10px;color:#748995}
+.game-kind{letter-spacing:.04em}
+.game-time{color:#526f82;white-space:nowrap}
+.game-entry h3{font-family:var(--serif);font-size:25px;font-weight:400;letter-spacing:.03em;margin:14px 0 12px;line-height:1.5}
+.game-entry>p{color:var(--muted);font-size:13px;line-height:1.95;margin-bottom:20px}
+.game-notes{display:flex;flex-wrap:wrap;gap:8px}
+.game-notes span{font-size:10px;color:#627c8a;background:#edf3f5;border-radius:3px;padding:4px 9px}
+.game-related{display:inline-block;margin-top:21px;color:#526f82;font-size:11px;text-decoration:none;border-bottom:1px solid #c8d6de;padding-bottom:3px}
+.game-related:hover{color:#304959}
+.game-entry figure{margin:22px 0 0}
+.game-entry figure img{width:100%;height:auto;display:block;border-radius:4px}
+.game-entry figure figcaption{font-size:11px;color:var(--muted);margin-top:8px}
+.games-closing{padding-block:70px;text-align:center}
+.games-closing p{font:400 23px/1.7 var(--serif);color:#6c879a;margin-bottom:16px}
+.games-page nav a[aria-current="page"]{color:#304959;border-bottom:1px solid #8da7b7}
+@media(max-width:800px){.games-intro{padding-block:32px 44px}.games-back{margin-bottom:32px}.game-chapter{padding-top:48px}.game-chapter-heading>p{display:none}.game-entry{padding:23px}.games-closing{padding-block:50px}}
+@media(max-width:560px){.game-list{grid-template-columns:1fr}.games-intro h1{font-size:clamp(27px,7.5vw,38px)}.games-intro>p{font-size:12px}.games-chapters{gap:8px}.games-chapters a{font-size:11px;padding:9px 12px;gap:14px}.game-chapter-heading{gap:16px}.game-chapter-heading h2{font-size:26px}.game-chapter-number{font-size:26px}.game-entry h3{font-size:23px}}
