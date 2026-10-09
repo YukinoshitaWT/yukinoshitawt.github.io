@@ -162,6 +162,8 @@ h2 em{color:#6c879a}
 }
 
 /* A quiet doorway from the portfolio into the separate game journal. */
+.hero-scene h1.hero-aspiration{font-size:clamp(30px,3.5vw,48px);line-height:1.7;letter-spacing:.02em}
+@media(max-width:800px){.hero-scene h1.hero-aspiration{font-size:clamp(23px,5.8vw,38px);letter-spacing:0}}
 .games-preview{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;padding-bottom:90px;align-items:center}
 .games-preview h2{font-family:var(--serif);font-size:32px;font-weight:400;line-height:1.6;letter-spacing:.02em;margin-bottom:17px}
 .games-preview p{color:var(--muted);font-size:13px;line-height:2;margin-bottom:24px}
