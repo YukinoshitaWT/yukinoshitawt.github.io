@@ -234,9 +234,10 @@ h2 em{color:#6c879a}
 .visual-level .work-cover-image{object-position:58% center;filter:saturate(.87)}
 .visual-system .work-cover-image{object-position:58% center;filter:brightness(1.06)}
 .visual-action .work-cover-image{object-position:48% center;filter:saturate(.9)}
-.visual-rogue .work-cover-image{object-position:center bottom;filter:saturate(.85)}
+.visual-rogue .work-cover-image{object-position:center top;filter:saturate(.85)}
 .portfolio-page .visual-rogue::after{background:linear-gradient(90deg,rgba(29,28,54,.55),transparent 78%),linear-gradient(0deg,rgba(29,28,54,.4),transparent 68%)}
 .portfolio-page .visual-rogue .visual-card-title{max-width:68%;margin-bottom:10px}
+.portfolio-page .work-cover-credit{font-size:10px;color:#8294a0;margin:9px 0 0}
 @media(max-width:1000px) and (min-width:801px){
   .portfolio-page .section-head{align-items:start;flex-direction:column;gap:19px}
   .portfolio-page .section-head>p{max-width:none}
