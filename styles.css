@@ -216,6 +216,14 @@ h2 em{color:#6c879a}
 .about-interest .about-small{font-size:12px;color:#718590;line-height:2}
 .portfolio-page .contact-wrap>div:first-child{min-width:0}
 .portfolio-page .contact-card{flex-shrink:0}
+.portfolio-page .work-featured .visual-demo{aspect-ratio:16/9;min-height:320px;align-self:start;background:#dce8ed;padding:30px}
+.work-cover-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
+.portfolio-page .visual-demo::before{content:none}
+.portfolio-page .visual-demo::after{inset:0;opacity:1;background:linear-gradient(0deg,rgba(22,41,53,.85),rgba(22,41,53,.22) 28%,transparent 62%)}
+.portfolio-page .visual-demo .visual-top span{color:#405b6c;background:rgba(247,250,251,.87);padding:4px 7px;border-radius:2px}
+.portfolio-page .visual-demo .visual-card-title{color:#f5f9fa;font-size:42px;text-shadow:0 2px 15px rgba(14,32,43,.35)}
+.portfolio-page .visual-demo .visual-card-title span{color:#d6e4eb;letter-spacing:.08em;font-size:10px}
+.portfolio-page .visual-demo .visual-arrow{color:#edf5f8}
 @media(max-width:1000px) and (min-width:801px){
   .portfolio-page .section-head{align-items:start;flex-direction:column;gap:19px}
   .portfolio-page .section-head>p{max-width:none}
@@ -225,6 +233,7 @@ h2 em{color:#6c879a}
   .portfolio-page .signal-item b{margin-right:7px}
 }
 @media(max-width:800px){
+  .portfolio-page .work-featured .visual-demo{min-height:0;width:100%;padding:26px}
   .portfolio-page .section-head>p{max-width:none}
   .portfolio-page .work-featured .work-info h3{font-size:21px}
   .portfolio-page .work-info h3{font-size:19px}
@@ -234,6 +243,8 @@ h2 em{color:#6c879a}
   .portfolio-page .about-stamp{position:absolute;left:auto;right:2px;bottom:4px;width:65px;height:65px;margin:0}
 }
 @media(max-width:460px){
+  .portfolio-page .work-featured .visual-demo{padding:19px}
+  .portfolio-page .visual-demo .visual-card-title{font-size:30px}
   .portfolio-page .section-head h2{font-size:27px}
   .portfolio-page .work-info h3,.portfolio-page .work-featured .work-info h3{font-size:18px}
   .portfolio-page .about-left{padding-right:0}
