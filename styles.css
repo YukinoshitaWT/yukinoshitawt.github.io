@@ -171,3 +171,76 @@ h2 em{color:#6c879a}
 .games-preview-names span{font-family:var(--serif);font-size:21px;color:#718a9b;letter-spacing:.04em}
 @media(max-width:800px){.games-preview{grid-template-columns:1fr;gap:30px;padding-bottom:68px}.games-preview-names{justify-content:flex-start;padding:22px 0}}
 @media(max-width:560px){.topbar{height:auto;min-height:76px;flex-wrap:wrap;gap:15px;padding-block:17px}.topbar nav{order:3;flex-basis:100%;justify-content:space-between;gap:12px}.games-preview h2{font-size:27px}.games-preview-names span{font-size:18px}}
+
+/* Personal notes give each work its own question and room to read. */
+.portfolio-page .hero-lede{max-width:540px;text-wrap:pretty}
+.portfolio-page .section-head{gap:38px}
+.portfolio-page .section-head h2{font-size:clamp(29px,3.2vw,39px);line-height:1.65}
+.portfolio-page .section-head>p{max-width:345px;font-size:13px}
+.portfolio-page .work-card:not(.work-featured){display:flex;flex-direction:column}
+.portfolio-page .work-info{display:flex;flex-direction:column;flex:1;min-width:0}
+.portfolio-page .work-info h3{font-size:19px;line-height:1.6;margin-bottom:16px;text-wrap:pretty}
+.portfolio-page .work-featured .work-info h3{font-size:23px}
+.portfolio-page .work-info p{max-width:none;font-size:13px;line-height:2;margin-bottom:18px;text-wrap:pretty}
+.work-insight{border-left:2px solid #b5c7d1;padding:0 0 0 12px;margin:0 0 23px;color:#4e687a;font-size:13px;line-height:1.9}
+.work-insight>span{display:block;color:#7a8e99;font-size:10px;letter-spacing:.06em;margin-bottom:4px}
+.portfolio-page .work-info .tag-row{margin-top:auto}
+.work-link{align-self:flex-start;display:inline-flex;gap:19px;align-items:center;margin-top:22px;padding:5px 0;border-bottom:1px solid #c4d3db;color:#466478;text-decoration:none;font-size:12px}
+.work-link span{color:#936b50}
+.work-link:hover{color:#243f50;border-color:#809eaf}
+.work-detail{border-block:1px solid var(--line);margin:0 0 22px;padding:13px 0;color:var(--muted)}
+.work-detail summary{cursor:pointer;font-size:12px;line-height:1.9;color:#496777}
+.work-detail summary::marker{color:#7d98a8}
+.work-detail[open] summary{margin-bottom:12px}
+.work-detail-body{padding-left:2px}
+.work-detail-body ol{padding-left:21px;font-size:12px;line-height:2;margin:0 0 15px}
+.work-detail-body li+li{margin-top:5px}
+.work-detail-body b{font-weight:500;color:#486475}
+.portfolio-page .work-info .work-detail-body p{font-size:12px;margin-bottom:13px}
+.portfolio-page .work-info .work-reflection{color:#708390;margin-bottom:0}
+.portfolio-page .approach-wrap{gap:70px;align-items:start}
+.portfolio-page .steps article{padding:25px 0}
+.portfolio-page .steps h3{font-size:16px;line-height:1.6;margin-bottom:8px}
+.portfolio-page .steps p{font-size:13px;line-height:2;text-wrap:pretty}
+.portfolio-page .about-section{grid-template-columns:.85fr 1.15fr;gap:90px;align-items:start}
+.portfolio-page .about-left{min-height:0}
+.portfolio-page .about-left h2{font-size:clamp(32px,3.5vw,42px);line-height:1.65}
+.about-intro{font-size:13px;color:var(--muted);line-height:2;margin:24px 0 0}
+.portfolio-page .about-stamp{position:static;margin:42px 0 0 15px}
+.portfolio-page .about-right{padding-top:6px}
+.about-block+.about-block{border-top:1px solid var(--line);padding-top:26px;margin-top:27px}
+.about-block h3{font-size:13px;font-weight:500;color:#6b8391;margin:0 0 12px;letter-spacing:.04em}
+.about-block p{font-size:14px;line-height:2.1;color:#4c6576;text-wrap:pretty;margin-bottom:14px}
+.about-block .about-lede{font-size:16px;line-height:2.1}
+.about-block p:last-child{margin-bottom:0}
+.about-interest .about-small{font-size:12px;color:#718590;line-height:2}
+.portfolio-page .contact-wrap>div:first-child{min-width:0}
+.portfolio-page .contact-card{flex-shrink:0}
+@media(max-width:1000px) and (min-width:801px){
+  .portfolio-page .section-head{align-items:start;flex-direction:column;gap:19px}
+  .portfolio-page .section-head>p{max-width:none}
+  .portfolio-page .work-featured{grid-template-columns:1fr 1fr;gap:20px}
+  .portfolio-page .approach-wrap,.portfolio-page .about-section{gap:40px}
+  .portfolio-page .signal-item{font-size:11px}
+  .portfolio-page .signal-item b{margin-right:7px}
+}
+@media(max-width:800px){
+  .portfolio-page .section-head>p{max-width:none}
+  .portfolio-page .work-featured .work-info h3{font-size:21px}
+  .portfolio-page .work-info h3{font-size:19px}
+  .portfolio-page .approach-wrap{gap:34px}
+  .portfolio-page .about-section{grid-template-columns:1fr;gap:34px}
+  .portfolio-page .about-left{position:relative;padding-right:78px}
+  .portfolio-page .about-stamp{position:absolute;left:auto;right:2px;bottom:4px;width:65px;height:65px;margin:0}
+}
+@media(max-width:460px){
+  .portfolio-page .section-head h2{font-size:27px}
+  .portfolio-page .work-info h3,.portfolio-page .work-featured .work-info h3{font-size:18px}
+  .portfolio-page .about-left{padding-right:0}
+  .portfolio-page .about-stamp{display:none}
+  .about-block .about-lede{font-size:15px}
+  .portfolio-page .signal-item{font-size:11px}
+  .portfolio-page .signal-item b{margin-right:8px}
+  .portfolio-page .steps article{grid-template-columns:25px 1fr 20px;gap:11px}
+  .portfolio-page .contact-wrap h2{font-size:clamp(27px,7.5vw,35px)}
+}
