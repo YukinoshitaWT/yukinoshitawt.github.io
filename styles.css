@@ -224,6 +224,19 @@ h2 em{color:#6c879a}
 .portfolio-page .visual-demo .visual-card-title{color:#f5f9fa;font-size:42px;text-shadow:0 2px 15px rgba(14,32,43,.35)}
 .portfolio-page .visual-demo .visual-card-title span{color:#d6e4eb;letter-spacing:.08em;font-size:10px}
 .portfolio-page .visual-demo .visual-arrow{color:#edf5f8}
+.portfolio-page .visual-image{aspect-ratio:16/9;min-height:0;flex-shrink:0;padding:27px;background:#dce8ed}
+.portfolio-page .visual-image::before{content:none}
+.portfolio-page .visual-image::after{inset:0;opacity:1;background:linear-gradient(0deg,rgba(22,38,52,.84),rgba(22,38,52,.22) 32%,transparent 68%)}
+.portfolio-page .visual-image .visual-top span{color:#405b6c;background:rgba(247,250,251,.87);padding:4px 7px;border-radius:2px}
+.portfolio-page .visual-image .visual-card-title{max-width:83%;font-size:30px;color:#f5f9fa;text-shadow:0 2px 14px rgba(14,32,43,.4)}
+.portfolio-page .visual-image .visual-card-title span{color:#e0eaf0;letter-spacing:.04em;font-size:11px}
+.portfolio-page .visual-image .visual-arrow{color:#edf5f8}
+.visual-level .work-cover-image{object-position:58% center;filter:saturate(.87)}
+.visual-system .work-cover-image{object-position:58% center;filter:brightness(1.06)}
+.visual-action .work-cover-image{object-position:48% center;filter:saturate(.9)}
+.visual-rogue .work-cover-image{object-position:center bottom;filter:saturate(.85)}
+.portfolio-page .visual-rogue::after{background:linear-gradient(90deg,rgba(29,28,54,.55),transparent 78%),linear-gradient(0deg,rgba(29,28,54,.4),transparent 68%)}
+.portfolio-page .visual-rogue .visual-card-title{max-width:68%;margin-bottom:10px}
 @media(max-width:1000px) and (min-width:801px){
   .portfolio-page .section-head{align-items:start;flex-direction:column;gap:19px}
   .portfolio-page .section-head>p{max-width:none}
@@ -245,6 +258,9 @@ h2 em{color:#6c879a}
 @media(max-width:460px){
   .portfolio-page .work-featured .visual-demo{padding:19px}
   .portfolio-page .visual-demo .visual-card-title{font-size:30px}
+  .portfolio-page .visual-image{padding:19px}
+  .portfolio-page .visual-image .visual-card-title{font-size:26px}
+  .portfolio-page .visual-image .visual-card-title span{font-size:10px}
   .portfolio-page .section-head h2{font-size:27px}
   .portfolio-page .work-info h3,.portfolio-page .work-featured .work-info h3{font-size:18px}
   .portfolio-page .about-left{padding-right:0}
