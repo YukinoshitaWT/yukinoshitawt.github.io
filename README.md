@@ -6,6 +6,7 @@
 - `index.html`：主页文案、作品外链与分类、游戏图片展示、联系方式。
 - `portfolio.css`：主页灰蓝冬日主题、响应式排版与轻量动效。
 - `portfolio.js`：作品筛选、滚动渐入、图片浏览和复制邮箱。
+- `jade-sword.html`、`case-study.css`、`jade-sword.js`：玉剑传说案例页，含资源关系与三阶段机关示意；图解不代表实机数值或精确布局。
 - `games.html`、`games.css`、`styles.css`：游戏经历子页及其样式。
 - `assets/`：页面图片；主题概念插画与实际演示使用明确标签区分。
 

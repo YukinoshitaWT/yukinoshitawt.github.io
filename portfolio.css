@@ -148,6 +148,9 @@ em { font-style: normal; color: var(--blue); }
 .work-link { display: inline-flex; align-items: center; gap: 20px; align-self: start; text-decoration: none; padding: 4px 0; margin-top: 23px; border-bottom: 1px solid #c6d5dd; font-size: 12px; transition: color .2s, border-color .2s; }
 .work-link span { color: var(--warm); }
 .work-link:hover { color: #244e69; border-color: #6d8da3; }
+.work-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 25px; margin-top: 23px; }
+.work-actions .work-link { margin-top: 0; }
+.work-actions .case-entry { color: #315d76; font-weight: 500; border-bottom-color: #8faebe; }
 .work-info .work-cover-credit { font-size: 9px; color: #91a2ad; margin: 9px 0 0; }
 .work-detail { border-block: 1px solid var(--line); margin-bottom: 24px; padding: 12px 0; color: var(--muted); }
 .work-detail summary { cursor: pointer; color: #5e7c90; font-size: 12px; line-height: 1.9; }
