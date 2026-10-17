@@ -8,8 +8,10 @@
   <title>玉剑传说 · 设计过程｜暖雪之下</title>
   <link rel="stylesheet" href="portfolio.css?v=showcase-20261017">
   <link rel="stylesheet" href="case-study.css?v=showcase-20261017">
+  <link rel="stylesheet" href="sword-control.css?v=sword-play-20261017">
   <script src="portfolio.js?v=winter-20261016" defer></script>
   <script src="jade-sword.js?v=jade-case-20261016" defer></script>
+  <script src="sword-control.js?v=sword-play-20261017" defer></script>
 </head>
 <body class="case-page">
   <a class="skip-link" href="#controls">跳到设计内容</a>
@@ -38,37 +40,55 @@
     </section>
 
     <section class="sword-controls wrap" id="controls" aria-labelledby="controls-title">
-      <div class="case-section-head" data-reveal><div><div class="eyebrow">CONTROL DESIGN / 御剑操作</div><h2 id="controls-title">从转动视角，<br><em>到亲手操控飞剑。</em></h2></div><p>以下为 Demo 内的操作说明，图示仅供阅读。<br>在游戏中按 Tab 进入御剑模式，镜头与鼠标的职责随之改变。</p></div>
+      <div class="case-section-head" data-reveal><div><div class="eyebrow">CONTROL DESIGN / 御剑操作</div><h2 id="controls-title">角色继续移动，<br><em>飞剑也由我掌控。</em></h2></div><p>我把飞剑当成另一个可操控的“角色”。<br>固定跟随镜头，为角色移动与御剑操作分配不同输入。</p></div>
       <div class="sword-control-layout" data-reveal>
-        <figure class="sword-control-figure">
-          <div class="sword-control-mode"><span>游戏内按键 <kbd>Tab</kbd> 进入御剑模式</span><span>静态示意图</span></div>
+        <figure class="sword-control-figure" id="sword-playground">
+          <div class="sword-control-mode"><span>游戏内按键 <kbd>Tab</kbd> 进入御剑模式</span><span>操作关系示意</span></div>
+          <div class="sword-stage" data-sword-stage tabindex="0" role="group" aria-label="御剑控制体验区" aria-describedby="sword-play-help">
           <svg class="sword-control-diagram" viewBox="0 0 540 330" role="img" aria-labelledby="control-svg-title control-svg-desc">
             <title id="control-svg-title">御剑模式的镜头与飞剑控制关系</title>
             <desc id="control-svg-desc">第三人称镜头拉高拉远，以固定角度跟随角色。鼠标类似摇杆，控制飞剑在平面内前后左右移动，另外两个按键分别控制高度上升和下降。图中位置与距离只用于说明操作关系。</desc>
             <defs><marker id="control-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto-start-reverse"><path d="m1 1 4 2.5L1 6" fill="none" stroke="currentColor" stroke-width="1.1"/></marker></defs>
+            <g data-sword-world>
             <path class="control-plane" d="m75 212 192-85 198 82-192 88z"/>
             <path class="control-grid" d="m122 191 197 84m-149-105 197 84m-149-105 197 84m-292 0 192-85m-142 106 192-85m-142 106 192-85"/>
+            </g>
             <path class="control-camera-sight" d="M409 73 273 211M409 73 179 189M409 73 357 252"/>
             <g class="control-camera"><rect x="389" y="45" width="33" height="23" rx="5"/><path d="m422 51 14-7v26l-14-8m-26 6-9 9m26-9 5 9"/></g>
             <text class="control-label" x="330" y="28">镜头拉高、拉远</text>
             <text class="control-label control-label-muted" x="330" y="102">固定角度跟随角色</text>
-            <g class="control-character"><ellipse cx="227" cy="242" rx="20" ry="8"/><circle cx="227" cy="214" r="10"/><path d="M211 240v-7a16 16 0 0 1 32 0v7"/></g>
+            <g class="control-character" data-sword-player><ellipse cx="227" cy="242" rx="20" ry="8"/><circle cx="227" cy="214" r="10"/><path d="M211 240v-7a16 16 0 0 1 32 0v7"/></g>
             <text class="control-label control-label-muted" x="157" y="275">角色</text>
             <path class="control-move" d="m259 208 76-76" marker-start="url(#control-arrow)" marker-end="url(#control-arrow)"/>
             <path class="control-move" d="m230 156 118 50" marker-start="url(#control-arrow)" marker-end="url(#control-arrow)"/>
-            <g class="control-flying-sword"><path d="m274 168 42-40-25 52-7 2z"/><path d="m271 175 24 13m-13-6-10 16"/></g>
+            <ellipse class="sword-ground-shadow" data-sword-shadow cx="285" cy="205" rx="14" ry="5"/>
+            <path class="sword-live-height" data-sword-height-line d="M285 205V170"/>
+            <g class="control-flying-sword" data-sword-blade><path d="m274 168 42-40-25 52-7 2z"/><path d="m271 175 24 13m-13-6-10 16"/></g>
             <path class="control-height" d="M367 154v82" marker-start="url(#control-arrow)" marker-end="url(#control-arrow)"/>
             <text class="control-label control-label-warm" x="386" y="188">高度</text>
             <text class="control-label control-label-muted" x="195" y="316">鼠标控制平面内移动</text>
           </svg>
+          <div class="sword-stick" data-sword-stick aria-hidden="true"><span></span></div>
+          </div>
           <figcaption><span class="sword-control-legend"><i aria-hidden="true"></i>平面移动 <i aria-hidden="true"></i>高度调整</span><span>操作关系示意 · 非实机画面</span></figcaption>
+          <div class="sword-tools" data-sword-tools hidden>
+            <div class="sword-start-row"><button type="button" class="sword-start" data-sword-start>开始御剑体验 <span aria-hidden="true">↗</span></button><button type="button" class="sword-reset" data-sword-reset>重置位置</button></div>
+            <p class="sword-play-help" id="sword-play-help"><span class="sword-help-desktop">网页体验键位：WASD 移动角色，Q / E 降低或升高飞剑，在图内移动鼠标控制方向。也可使用下方按钮与滑杆。Tab 切换控件，Esc 暂停。</span><span class="sword-help-touch">网页体验：按住下方方向按钮移动角色，在图内拖动操控飞剑，再用升降按钮调整高度。</span></p>
+            <div class="sword-inputs">
+              <div><span class="sword-input-label">角色移动</span><div class="sword-pad" data-sword-pad role="group" aria-label="网页体验中的角色移动"><button type="button" class="sword-pad-up" data-sword-move="forward" aria-label="向前移动角色">↑</button><button type="button" data-sword-move="left" aria-label="向左移动角色">←</button><button type="button" data-sword-move="back" aria-label="向后移动角色">↓</button><button type="button" data-sword-move="right" aria-label="向右移动角色">→</button></div></div>
+              <div class="sword-height-control"><label class="sword-input-label" for="sword-height">飞剑高度 <span data-sword-height-value>45%</span></label><input id="sword-height" type="range" min="0" max="100" value="45" data-sword-height><div class="sword-height-buttons"><button type="button" data-sword-height-step="down">↓ 降低</button><button type="button" data-sword-height-step="up">↑ 升高</button></div></div>
+            </div>
+            <p class="sword-play-state" data-sword-state role="status">点击开始后，可以同时控制角色与飞剑。</p>
+            <p class="sword-play-note">此处用简化图形体验控制分工，按键与运动仅用于网页示意。实际战斗请看原 Demo。</p>
+          </div>
         </figure>
         <div class="sword-control-steps">
-          <article><span class="sword-control-number">01</span><div><h3>镜头，留出操控空间</h3><p>第三人称镜头拉高、拉远，保持固定角度跟随角色。</p></div></article>
+          <article><span class="sword-control-number">01</span><div><h3>固定镜头，把鼠标交给飞剑</h3><p>第三人称镜头拉高、拉远，以固定角度跟随角色。键盘继续控制角色移动，让玩家在御剑时也能调整站位、应对敌人。</p></div></article>
           <article><span class="sword-control-number">02</span><div><h3>鼠标，改为操控飞剑</h3><p>从控制视角切换为类似摇杆的操作，控制飞剑在平面内前后左右移动。</p></div></article>
-          <article><span class="sword-control-number">03</span><div><h3>两个按键，单独调整高度</h3><p>分别控制飞剑上升和下降，将高度变化与平面移动分开。</p></div></article>
+          <article><span class="sword-control-number">03</span><div><h3>补足高度，让御剑更立体</h3><p>仅在同一水平面控制飞剑会限制操作空间，因此增加两个按键，分别控制上升与下降。</p></div></article>
         </div>
       </div>
+      <div class="sword-design-intent" data-reveal><div><span class="eyebrow">THE DESIGN CHOICE</span><h3>把飞剑，<br>当作可操控的“角色”。</h3></div><div><p>我希望玩家通过操作感到自己正在御物，因此给飞剑独立的控制。与此同时，玩家角色仍需要移动，避免在御剑时站在原地承受攻击。</p><p>固定跟随镜头，释放鼠标控制飞剑；键盘保留角色移动，再以独立输入补充高度变化。这套分工，是我围绕“同时控制角色与飞剑”做出的选择。</p></div></div>
     </section>
 
     <section class="case-section wrap" id="combat" aria-labelledby="combat-title">

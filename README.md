@@ -8,6 +8,7 @@
 - `showcase.css`：首页玉剑传说与剑星的精选展示；桌面图片吸附、手机纵向阅读。
 - `portfolio.js`：作品筛选、滚动渐入、图片浏览和复制邮箱。
 - `jade-sword.html`、`case-study.css`、`jade-sword.js`：玉剑传说案例页，含御剑操作说明、资源关系与三阶段机关示意；图解不代表实机数值或精确布局。
+- `sword-control.css`、`sword-control.js`：按需启动的轻量御剑控制体验；网页示意使用 WASD/方向按钮移动角色、鼠标或触控移动飞剑、Q/E或滑杆/按钮控制高度。网页键位不作为原Demo完整键位说明。Tab 保留焦点导航，Esc 暂停，离开体验区域后停止运动。
 - `games.html`、`games.css`、`styles.css`：游戏经历子页及其样式。
 - `assets/`：页面图片；主题概念插画与实际演示使用明确标签区分。
 
