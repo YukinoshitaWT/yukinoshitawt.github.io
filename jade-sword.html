@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f3f6f7">
-  <meta name="description" content="暖雪之下的玉剑传说个人Demo：御剑主题的战斗资源循环、三个机关房的观察递进，以及制作过程与复盘。">
+  <meta name="description" content="暖雪之下使用Unity独立制作的玉剑传说个人Demo：御剑操作、战斗资源循环、三个机关房的观察递进，以及制作过程与复盘。">
   <title>玉剑传说 · 设计过程｜暖雪之下</title>
-  <link rel="stylesheet" href="portfolio.css?v=jade-case-20261016">
-  <link rel="stylesheet" href="case-study.css?v=jade-case-20261016">
+  <link rel="stylesheet" href="portfolio.css?v=showcase-20261017">
+  <link rel="stylesheet" href="case-study.css?v=showcase-20261017">
   <script src="portfolio.js?v=winter-20261016" defer></script>
   <script src="jade-sword.js?v=jade-case-20261016" defer></script>
 </head>
 <body class="case-page">
-  <a class="skip-link" href="#combat">跳到设计内容</a>
+  <a class="skip-link" href="#controls">跳到设计内容</a>
   <div class="grain" aria-hidden="true"></div>
   <div class="reading-progress" aria-hidden="true"><span></span></div>
   <header class="topbar">
     <a class="brand" href="index.html" aria-label="返回暖雪之下主页"><span class="brand-mark">雪</span><span>暖雪之下<span class="brand-dot">.</span></span></a>
-    <nav aria-label="案例目录"><a href="#combat">战斗循环</a><a href="#puzzles">机关递进</a><a href="#reflection">制作与复盘</a></nav>
+    <nav aria-label="案例目录"><a href="#controls">御剑操作</a><a href="#combat">战斗循环</a><a href="#puzzles">机关递进</a><a href="#reflection">制作与复盘</a></nav>
     <a class="top-contact" href="index.html#work">返回作品集 <span aria-hidden="true">↗</span></a>
   </header>
   <main id="top">
@@ -28,13 +28,47 @@
         <h1 id="case-title">玉剑传说<span>JADE SWORD</span></h1>
         <p class="case-lede">让御剑既参与战斗，<br><em>也成为推进关卡的操作。</em></p>
         <p class="case-intro">这是一次围绕御剑主题的个人原型尝试。从近战与技能之间的资源循环，到用飞剑击打机关，我希望让同一种操作连接战斗与关卡。</p>
-        <div class="case-hero-actions"><a class="button button-primary" href="https://www.bilibili.com/video/BV1tnPrzREdf" target="_blank" rel="noopener noreferrer">观看实机演示 <span aria-hidden="true">↗</span></a><a class="text-link" href="#combat">了解设计过程 <span aria-hidden="true">↓</span></a></div>
+        <div class="case-hero-actions"><a class="button button-primary" href="https://www.bilibili.com/video/BV1tnPrzREdf" target="_blank" rel="noopener noreferrer">观看实机演示 <span aria-hidden="true">↗</span></a><a class="text-link" href="#controls">了解设计过程 <span aria-hidden="true">↓</span></a></div>
       </div>
       <figure class="case-cover" data-reveal>
         <img src="assets/jade-sword-concept-cover.png" width="1672" height="941" alt="御剑主题概念插画：飞剑穿过栏杆，击中亮起暖光的机关" fetchpriority="high" decoding="async">
         <figcaption><span>御剑 · 机关 · 探索</span><span>主题概念插画 / AI 生成</span></figcaption>
       </figure>
-      <dl class="case-facts" data-reveal><div><dt>作品形态</dt><dd>个人 Demo</dd></div><div><dt>重点设计</dt><dd>角色技能、关卡机关</dd></div><div><dt>制作练习</dt><dd>从想法到原型搭建</dd></div><div><dt>阅读这篇案例</dt><dd>设计关系与个人复盘</dd></div></dl>
+      <dl class="case-facts" data-reveal><div><dt>作品形态</dt><dd>个人 Demo · 独立制作</dd></div><div><dt>制作引擎</dt><dd>Unity</dd></div><div><dt>重点设计</dt><dd>角色技能、关卡机关</dd></div><div><dt>制作方式</dt><dd>网络素材 · AI 编程工具辅助</dd></div></dl>
+    </section>
+
+    <section class="sword-controls wrap" id="controls" aria-labelledby="controls-title">
+      <div class="case-section-head" data-reveal><div><div class="eyebrow">CONTROL DESIGN / 御剑操作</div><h2 id="controls-title">从转动视角，<br><em>到亲手操控飞剑。</em></h2></div><p>按 Tab 进入御剑模式后，镜头与鼠标的职责随之改变。<br>飞剑在平面内的移动和高度调整，分别由不同输入控制。</p></div>
+      <div class="sword-control-layout" data-reveal>
+        <figure class="sword-control-figure">
+          <div class="sword-control-mode"><span><kbd>Tab</kbd> 进入御剑模式</span><span>CONTROL SCHEMATIC</span></div>
+          <svg class="sword-control-diagram" viewBox="0 0 540 330" role="img" aria-labelledby="control-svg-title control-svg-desc">
+            <title id="control-svg-title">御剑模式的镜头与飞剑控制关系</title>
+            <desc id="control-svg-desc">第三人称镜头拉高拉远，以固定角度跟随角色。鼠标类似摇杆，控制飞剑在平面内前后左右移动，另外两个按键分别控制高度上升和下降。图中位置与距离只用于说明操作关系。</desc>
+            <defs><marker id="control-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto-start-reverse"><path d="m1 1 4 2.5L1 6" fill="none" stroke="currentColor" stroke-width="1.1"/></marker></defs>
+            <path class="control-plane" d="m75 212 192-85 198 82-192 88z"/>
+            <path class="control-grid" d="m122 191 197 84m-149-105 197 84m-149-105 197 84m-292 0 192-85m-142 106 192-85m-142 106 192-85"/>
+            <path class="control-camera-sight" d="M409 73 273 211M409 73 179 189M409 73 357 252"/>
+            <g class="control-camera"><rect x="389" y="45" width="33" height="23" rx="5"/><path d="m422 51 14-7v26l-14-8m-26 6-9 9m26-9 5 9"/></g>
+            <text class="control-label" x="330" y="28">镜头拉高、拉远</text>
+            <text class="control-label control-label-muted" x="330" y="102">固定角度跟随角色</text>
+            <g class="control-character"><ellipse cx="227" cy="242" rx="20" ry="8"/><circle cx="227" cy="214" r="10"/><path d="M211 240v-7a16 16 0 0 1 32 0v7"/></g>
+            <text class="control-label control-label-muted" x="157" y="275">角色</text>
+            <path class="control-move" d="m259 208 76-76" marker-start="url(#control-arrow)" marker-end="url(#control-arrow)"/>
+            <path class="control-move" d="m230 156 118 50" marker-start="url(#control-arrow)" marker-end="url(#control-arrow)"/>
+            <g class="control-flying-sword"><path d="m274 168 42-40-25 52-7 2z"/><path d="m271 175 24 13m-13-6-10 16"/></g>
+            <path class="control-height" d="M367 154v82" marker-start="url(#control-arrow)" marker-end="url(#control-arrow)"/>
+            <text class="control-label control-label-warm" x="386" y="188">高度</text>
+            <text class="control-label control-label-muted" x="195" y="316">鼠标控制平面内移动</text>
+          </svg>
+          <figcaption><span class="sword-control-legend"><i aria-hidden="true"></i>平面移动 <i aria-hidden="true"></i>高度调整</span><span>操作关系示意 · 非实机画面</span></figcaption>
+        </figure>
+        <div class="sword-control-steps">
+          <article><span class="sword-control-number">01</span><div><h3>镜头，留出操控空间</h3><p>第三人称镜头拉高、拉远，保持固定角度跟随角色。</p></div></article>
+          <article><span class="sword-control-number">02</span><div><h3>鼠标，改为操控飞剑</h3><p>从控制视角切换为类似摇杆的操作，控制飞剑在平面内前后左右移动。</p></div></article>
+          <article><span class="sword-control-number">03</span><div><h3>两个按键，单独调整高度</h3><p>分别控制飞剑上升和下降，将高度变化与平面移动分开。</p></div></article>
+        </div>
+      </div>
     </section>
 
     <section class="case-section wrap" id="combat" aria-labelledby="combat-title">
@@ -123,7 +157,7 @@
     <section class="case-section wrap" id="reflection" aria-labelledby="reflection-title">
       <div class="case-section-head" data-reveal><div><div class="eyebrow">03 / MAKING &amp; REFLECTION</div><h2 id="reflection-title">把想法做出来，<br><em>也看清还差在哪里。</em></h2></div><p>这次制作让我初步了解了一个 Demo 从想法到搭建的过程。<br>主题已经有了落点，战斗体验还需要继续打磨。</p></div>
       <div class="making-grid" data-reveal>
-        <article class="making-card"><span class="case-card-label">我的制作范围</span><h3>关卡与角色技能，是主要设计内容。</h3><p>围绕御剑主题设计战斗循环与技能操作，并将操控飞剑的能力延伸到关卡机关中；制作中也涉及了原型搭建所需的其他环节。</p><dl class="making-facts"><div><dt>设计关注</dt><dd>角色技能、资源循环、关卡机关</dd></div><div><dt>素材来源</dt><dd>使用网络素材进行原型搭建</dd></div><div><dt>制作辅助</dt><dd>借助 Cursor、Trae 辅助制作</dd></div></dl></article>
+        <article class="making-card"><span class="case-card-label">我的制作范围</span><h3>在 Unity 中，独立完成这次原型尝试。</h3><p>关卡与角色技能是我的主要设计内容。围绕御剑主题设计战斗循环与技能操作，并将操控飞剑的能力延伸到关卡机关中；制作中也涉及了原型搭建所需的其他环节。</p><dl class="making-facts"><div><dt>制作引擎</dt><dd>Unity · 独立制作</dd></div><div><dt>设计关注</dt><dd>角色技能、资源循环、关卡机关</dd></div><div><dt>素材来源</dt><dd>使用网上获取的游戏素材进行原型搭建</dd></div><div><dt>制作辅助</dt><dd>借助 Cursor、Trae 等 AI 编程工具辅助制作</dd></div></dl></article>
         <article class="making-card"><span class="case-card-label">我的复盘</span><h3>满意的是御剑主题，想补足的是战斗手感。</h3><p>我最满意的是以御剑为主题搭起了战斗设计，并让它参与关卡推进。但当前实现效果仍有限，尤其是打击反馈和整体战斗体验，还没有达到自己希望的程度。</p><p>这一版优先完成基础循环，技能之间的配合还没有展开。后续需要把更多时间留给技能衔接和体验打磨。</p></article>
       </div>
       <div class="next-attempt" data-reveal><span>下一次，我想这样收束范围</span><p>专注一场 <em>Boss 战</em>，<br>把打击感与战斗体验，一点点打磨好。</p><small>这是后续制作方向，尚未作为本 Demo 的完成内容展示。</small></div>

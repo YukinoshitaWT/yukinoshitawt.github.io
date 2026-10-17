@@ -1,0 +1,93 @@
+.work-selection { display: grid; gap: 64px; }
+.selection-label { display: flex; align-items: center; justify-content: space-between; gap: 20px; color: #8096a3; font-size: 10px; letter-spacing: .08em; }
+.selection-label>span:first-child { color: #597589; font-size: 12px; letter-spacing: .12em; }
+.work-spotlights { display: grid; gap: 28px; }
+.work-card.work-spotlight { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 30px 48px; padding: 30px 36px 38px; border-radius: 16px; background: #f9fcfb; box-shadow: 0 16px 55px #2b4c6005; }
+.work-spotlight.spotlight-jade { background: linear-gradient(125deg,#edf4f6,#fcfdfb 82%); border-color: #c8d8e1; }
+.work-spotlight.spotlight-stellar { background: linear-gradient(125deg,#eef2f8,#fafcfc 82%); border-color: #d2dce7; }
+.spotlight-head { grid-column: 1/-1; display: flex; align-items: center; gap: 21px; padding-bottom: 23px; border-bottom: 1px solid #cfdee58c; }
+.spotlight-number { font: 400 42px/1.1 var(--serif); color: #9eb6c6; }
+.spotlight-head h3 { margin: 6px 0 0; font: 400 27px/1.5 var(--serif); letter-spacing: .07em; }
+.spotlight-type { margin-left: auto; color: #7f96a5; font-size: 10px; padding: 5px 12px; border: 1px solid #c6d7e1; border-radius: 30px; white-space: nowrap; }
+.spotlight-media { min-width: 0; position: sticky; top: 110px; }
+.spotlight-media .work-visual { aspect-ratio: 1.3; padding: 27px; border-radius: 10px; }
+.spotlight-media .visual-card-title { font-size: clamp(23px,2.5vw,34px); max-width: 95%; }
+.spotlight-media .visual-card-title span { letter-spacing: .12em; }
+.spotlight-media .visual-demo .work-cover-image { object-position: 52% center; }
+.spotlight-caption { display: flex; justify-content: space-between; align-items: start; gap: 10px; color: #8196a4; margin-top: 13px; font-size: 9px; line-height: 1.8; }
+.spotlight-caption a { color: #5c7b90; text-underline-offset: 4px; text-decoration-color: #c0d0db; }
+.spotlight-controls-note { display: flex; flex-wrap: wrap; align-items: center; gap: 11px 17px; padding: 19px 0; margin-top: 16px; border-block: 1px solid #d5e0e6; color: #5c7a8d; font-size: 10px; }
+.spotlight-controls-note kbd { display: inline-block; margin-right: 5px; padding: 1px 7px; border: 1px solid #aebfcb; border-bottom-width: 2px; border-radius: 4px; font: 10px/1.7 var(--mono); }
+.spotlight-media-note { color: #8ba0ad; font: 12px/2 var(--serif); margin-top: 16px; }
+.spotlight-copy { min-width: 0; }
+.spotlight-thesis { font: 400 clamp(22px,2.3vw,31px)/1.7 var(--serif); letter-spacing: .03em; margin: -3px 0 31px; }
+.spotlight-step { padding-block: 23px 25px; border-top: 1px solid #d6e1e6; }
+.spotlight-step-label { color: #91a5b2; font: 9px/1.8 var(--mono); letter-spacing: .1em; }
+.spotlight-step h4 { margin: 9px 0 10px; font-size: 15px; font-weight: 500; letter-spacing: .025em; }
+.spotlight-step p { color: var(--muted); font-size: 13px; line-height: 2.05; text-wrap: pretty; }
+.spotlight-delivery { margin-top: 3px; padding-top: 19px; border-top: 1px solid #c9d9e2; }
+.spotlight-delivery dl { display: grid; gap: 9px; margin: 0; font-size: 11px; }
+.spotlight-delivery dl>div { display: grid; grid-template-columns: 80px 1fr; gap: 12px; }
+.spotlight-delivery dt { color: #8b9faa; }
+.spotlight-delivery dd { margin: 0; color: #5d788b; }
+.spotlight-delivery .work-actions { gap: 15px 23px; }
+.spotlight-delivery .button { padding: 11px 15px; gap: 22px; }
+.spotlight-delivery .work-link { font-size: 11px; }
+.spotlight-reflection { margin-top: 17px; color: #8396a3; font-size: 11px; line-height: 2; }
+.spotlight-observation { margin-top: 19px; padding-block: 18px; border-block: 1px solid #d6dfea; }
+.spotlight-observation>span { color: #8b9eaf; font-size: 9px; letter-spacing: .08em; }
+.spotlight-observation p { color: #5e7890; margin-top: 10px; font-size: 11px; }
+.spotlight-observation i { color: #a1b4c2; margin-inline: 9px; font-style: normal; }
+.work-archive>.selection-label { margin-bottom: 25px; }
+@media(min-width:1000px) and (prefers-reduced-motion:no-preference) {
+  .spotlight-head { position: relative; }
+  .spotlight-jade .spotlight-head::after { content: ""; position: absolute; bottom: -1px; left: 0; width: 90px; height: 1px; background: #779caf; }
+  .spotlight-stellar .spotlight-head::after { content: ""; position: absolute; bottom: -1px; left: 0; width: 90px; height: 1px; background: #889cb8; }
+}
+@media(max-width:1100px) {
+  .work-card.work-spotlight { padding: 25px; gap: 26px 30px; }
+  .spotlight-media .work-visual { padding: 22px; }
+  .spotlight-controls-note { gap: 8px 11px; font-size: 9px; }
+}
+@media(max-width:800px) {
+  .work-selection { gap: 47px; }
+  .work-card.work-spotlight { grid-template-columns: 1fr; gap: 24px; padding: 23px; }
+  .spotlight-media { position: static; }
+  .spotlight-media .work-visual { aspect-ratio: 16/9; }
+  .spotlight-media .visual-card-title { font-size: 32px; }
+  .spotlight-media-note { margin-top: 12px; }
+  .spotlight-thesis { font-size: 28px; margin-bottom: 24px; }
+  .spotlight-copy { padding-top: 6px; }
+  .spotlight-step { padding-block: 20px; }
+  .spotlight-controls-note { font-size: 10px; }
+}
+@media(max-width:520px) {
+  .selection-label { gap: 12px; font-size: 9px; letter-spacing: 0; }
+  .selection-label>span:first-child { font-size: 11px; letter-spacing: .05em; }
+  .work-card.work-spotlight { padding: 20px 16px 25px; gap: 20px; border-radius: 11px; }
+  .spotlight-head { gap: 13px; padding-bottom: 18px; }
+  .spotlight-number { font-size: 33px; }
+  .spotlight-head h3 { font-size: 23px; letter-spacing: .035em; }
+  .spotlight-head .work-kicker { font-size: 8px; }
+  .spotlight-type { display: none; }
+  .spotlight-media .work-visual { padding: 18px; }
+  .spotlight-media .visual-card-title { font-size: 26px; }
+  .spotlight-media .visual-card-title span { font-size: 9px; }
+  .spotlight-media .visual-top { top: 13px; left: 13px; right: 13px; font-size: 7px; }
+  .spotlight-thesis { font-size: 25px; }
+  .spotlight-step h4 { font-size: 14px; }
+  .spotlight-step p { font-size: 12px; }
+  .spotlight-controls-note { padding-block: 14px; gap: 9px 12px; font-size: 9px; }
+  .spotlight-delivery dl { font-size: 10px; }
+  .spotlight-delivery dl>div { grid-template-columns: 68px 1fr; gap: 8px; }
+  .spotlight-delivery .button { gap: 17px; font-size: 11px; }
+  .spotlight-delivery .work-actions { gap: 13px 18px; }
+  .spotlight-observation p { font-size: 10px; }
+  .spotlight-observation i { margin-inline: 5px; }
+}
+@media(max-height:720px) and (min-width:801px) {
+  .spotlight-media { position: static; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .spotlight-media { position: static; }
+}

@@ -7,7 +7,8 @@
   <meta name="description" content="暖雪之下的个人主页与战斗策划作品集。关注角色技能设计、战斗体验，以及让玩家记住的故事与角色。">
   <title>暖雪之下｜战斗策划作品集</title>
   <link rel="stylesheet" href="portfolio.css?v=jade-case-20261016">
-  <script src="portfolio.js?v=winter-20261016" defer></script>
+  <link rel="stylesheet" href="showcase.css?v=showcase-20261017">
+  <script src="portfolio.js?v=showcase-20261017" defer></script>
 </head>
 <body class="portfolio-page">
   <a class="skip-link" href="#work">跳到作品</a>
@@ -56,36 +57,59 @@
         </div>
         <span class="filter-status" role="status">展示 6 项作品</span>
       </div>
-      <div class="work-grid" id="work-grid">
-        <article class="work-card work-featured" data-category="combat level" data-reveal>
-          <a class="work-visual visual-work visual-demo" href="https://www.bilibili.com/video/BV1tnPrzREdf" target="_blank" rel="noopener noreferrer" aria-label="在 B 站打开战斗关卡 Demo：玉剑传说">
-            <img class="work-cover-image" src="assets/jade-sword-concept-cover.png" width="1672" height="941" alt="御剑主题插画：飞剑穿过古建筑的栏杆，击中亮起暖光的机关，远处是灰蓝色山峦与薄雾" loading="lazy" decoding="async">
-            <div class="visual-top"><span>FEATURED WORK / 01</span><span>主题插画</span></div>
-            <div class="visual-card-title">玉剑传说<span>JADE SWORD · 御剑与机关</span></div><span class="visual-arrow">↗</span>
-          </a>
-          <div class="work-info">
-            <div><span class="work-kicker">个人 Demo · 战斗与关卡设计</span><h3>玉剑传说｜御剑主题战斗与关卡</h3></div><span class="work-number">01</span>
-            <p>围绕御剑操作搭建的个人 Demo：近战积累战斗资源，消耗资源施放技能；同一种飞剑操作，也被用于关卡中的机关交互。</p>
-            <div class="work-insight"><span>设计尝试</span>让御剑既参与战斗，也成为推进关卡的操作。</div>
-            <details class="work-detail">
-              <summary>三间机关房，逐步增加观察难度</summary>
-              <div class="work-detail-body">
-                <p>玩家被栏杆挡在房间外，需要操控飞剑进入房间击打机关。三个房间依次改变机关的可见性：</p>
-                <ol><li><b>直接观察：</b>第一个机关的位置可以直接看见。</li><li><b>寻找角度：</b>第二个机关位于房间侧边，需要调整观察角度。</li><li><b>借助镜面：</b>第三个机关藏在死角，需要通过镜子确认位置。</li></ol>
-                <p class="work-reflection">当前版本的打击反馈与战斗体验仍有提升空间。下一次原型，我希望聚焦一场 Boss 战，继续打磨这些细节。</p>
-              </div>
-            </details>
-            <div class="tag-row"><span>御剑操作</span><span>资源循环</span><span>机关交互</span></div>
-            <div class="work-actions"><a class="work-link case-entry" href="jade-sword.html">查看设计过程 <span aria-hidden="true">→</span></a><a class="work-link" href="https://www.bilibili.com/video/BV1tnPrzREdf" target="_blank" rel="noopener noreferrer">观看 Demo 演示 <span aria-hidden="true">↗</span></a></div>
+      <div class="work-selection" id="work-grid">
+      <div class="work-spotlights" data-work-group>
+        <div class="selection-label"><span>从原型，到动作拆解</span><span>设计原型 / 动作分析</span></div>
+        <article class="work-card work-spotlight spotlight-jade" data-category="combat level" aria-labelledby="jade-spotlight-title">
+          <header class="spotlight-head"><span class="spotlight-number">01</span><div><span class="work-kicker">PERSONAL PROTOTYPE · UNITY</span><h3 id="jade-spotlight-title">玉剑传说</h3></div><span class="spotlight-type">个人 Demo</span></header>
+          <figure class="spotlight-media" data-reveal>
+            <a class="work-visual visual-work visual-demo" href="jade-sword.html" aria-label="查看玉剑传说的设计过程">
+              <img class="work-cover-image" src="assets/jade-sword-concept-cover.png" width="1672" height="941" alt="御剑主题概念插画：飞剑穿过栏杆，击中亮起暖光的机关" loading="lazy" decoding="async">
+              <div class="visual-top"><span>JADE SWORD</span><span>AI 概念插画</span></div>
+              <div class="visual-card-title">御剑，亦是探索。<span>战斗操作 · 关卡机关</span></div><span class="visual-arrow" aria-hidden="true">↗</span>
+            </a>
+            <figcaption class="spotlight-caption"><span>主题概念插画 / AI 生成</span><a href="https://www.bilibili.com/video/BV1tnPrzREdf" target="_blank" rel="noopener noreferrer">查看实际演示 ↗</a></figcaption>
+            <div class="spotlight-controls-note" aria-label="Demo 中的操作方式"><span><kbd>Tab</kbd> 进入御剑</span><span>鼠标 · 平面移动</span><span>双键 · 高度控制</span></div>
+            <p class="spotlight-media-note">从一柄飞剑的操作，延伸到一段关卡的推进。</p>
+          </figure>
+          <div class="spotlight-copy">
+            <p class="spotlight-thesis" data-reveal>让玩家亲手掌控飞剑，<br><em>连接战斗与机关。</em></p>
+            <div class="spotlight-step" data-reveal><span class="spotlight-step-label">01 / 观察空间</span><h4>先让飞剑的轨迹看得清。</h4><p>按 Tab 进入御剑模式，第三人称镜头拉远、拉高，以固定角度跟随角色移动，为观察飞剑轨迹留出空间。</p></div>
+            <div class="spotlight-step" data-reveal><span class="spotlight-step-label">02 / 操作分工</span><h4>鼠标控制方向，按键控制高度。</h4><p>鼠标从控制视角切换为类似摇杆的输入，控制飞剑在平面上前后左右移动；另用两个按键控制上升与下降。</p></div>
+            <div class="spotlight-step" data-reveal><span class="spotlight-step-label">03 / 主题延伸</span><h4>把御剑用到关卡里。</h4><p>近战积累资源，技能消耗资源。飞剑也用于击打栏杆后的机关，从直接看见目标，到寻找角度，再到借助镜面观察死角。</p></div>
+            <div class="spotlight-delivery" data-reveal><dl><div><dt>制作方式</dt><dd>Unity · 独立制作</dd></div><div><dt>素材与辅助</dt><dd>网络素材 · AI 编程工具辅助</dd></div></dl><div class="work-actions"><a class="button button-primary" href="jade-sword.html">查看设计过程 <span aria-hidden="true">→</span></a><a class="work-link" href="https://www.bilibili.com/video/BV1tnPrzREdf" target="_blank" rel="noopener noreferrer">观看实机演示 <span aria-hidden="true">↗</span></a></div><p class="spotlight-reflection">这一版完成了主题与基础循环，打击反馈和战斗体验仍是我想继续打磨的部分。</p></div>
           </div>
         </article>
+        <article class="work-card work-spotlight spotlight-stellar" data-category="combat" aria-labelledby="stellar-spotlight-title">
+          <header class="spotlight-head"><span class="spotlight-number">02</span><div><span class="work-kicker">COMBAT ANALYSIS · STELLAR BLADE</span><h3 id="stellar-spotlight-title">剑星 · 连锁反击</h3></div><span class="spotlight-type">战斗动作拆解</span></header>
+          <figure class="spotlight-media" data-reveal>
+            <a class="work-visual visual-work visual-image visual-action" href="https://docs.qq.com/pdf/DSk5XcUJLbWRxZUxj" target="_blank" rel="noopener noreferrer" aria-label="打开剑星战斗动作拆解文档">
+              <img class="work-cover-image" src="assets/stellar-blade-cover.webp" width="2338" height="1315" alt="剑星主题封面：角色抬手的动作特写，手部姿态与武器映在蓝色光影中" loading="lazy" decoding="async">
+              <div class="visual-top"><span>STELLAR BLADE</span><span>战斗分析文档</span></div><div class="visual-card-title">从交锋，到角色。<span>动作 · 镜头 · 视听反馈</span></div><span class="visual-arrow" aria-hidden="true">↗</span>
+            </a>
+            <figcaption class="spotlight-caption"><span>游戏主题封面</span><span>分析对象：《剑星》</span></figcaption>
+            <div class="spotlight-observation"><span>观察一段反击</span><p>操作输入 <i aria-hidden="true">→</i> 动作与镜头 <i aria-hidden="true">→</i> 体验与角色</p></div>
+            <p class="spotlight-media-note">从玩家的爽快感出发，继续追问它如何被设计。</p>
+          </figure>
+          <div class="spotlight-copy">
+            <p class="spotlight-thesis" data-reveal>一次漂亮的反击，<br><em>怎样让人记住角色？</em></p>
+            <div class="spotlight-step" data-reveal><span class="spotlight-step-label">01 / 从体验出发</span><h4>爽快感，是拆解的起点。</h4><p>连锁反击打起来很爽，动作特写也让我印象很深。我想理解这种操作快感与角色魅力同时成立的体验。</p></div>
+            <div class="spotlight-step" data-reveal><span class="spotlight-step-label">02 / 逐帧观察</span><h4>把连续动作拆开来看。</h4><p>围绕格挡、反击与追加攻击，逐帧观察动作、镜头、视听反馈和操作输入如何配合，并从 3C 角度整理角色的战斗表现。</p></div>
+            <div class="spotlight-step" data-reveal><span class="spotlight-step-label">03 / 关注角色表达</span><h4>招式，也在塑造角色。</h4><p>我希望理解战斗设计如何传达角色的气质，让玩家在操作中感受到角色的魅力。</p></div>
+            <div class="spotlight-delivery" data-reveal><dl><div><dt>作品形态</dt><dd>已有游戏的战斗分析</dd></div><div><dt>观察维度</dt><dd>动作 · 镜头 · 输入与反馈</dd></div></dl><div class="work-actions"><a class="button button-primary" href="https://docs.qq.com/pdf/DSk5XcUJLbWRxZUxj" target="_blank" rel="noopener noreferrer">阅读动作拆解 <span aria-hidden="true">↗</span></a></div></div>
+          </div>
+        </article>
+      </div>
+      <div class="work-archive" data-work-group>
+      <div class="selection-label"><span>继续探索</span><span>关卡叙事 / 系统与玩法 / 系列记录</span></div>
+      <div class="work-grid">
         <article class="work-card" data-category="level" data-reveal>
           <a class="work-visual visual-work visual-image visual-level" href="https://docs.qq.com/pdf/DSmdZdEV5RG5sZkVX" target="_blank" rel="noopener noreferrer" aria-label="打开赛博朋克2077关卡拆解文档">
             <img class="work-cover-image" src="assets/cyberpunk-2077-cover.webp" width="3840" height="2160" alt="赛博朋克2077主题封面：强尼站在夕阳下的街道，暖光映在墨镜与义体手臂上" loading="lazy" decoding="async">
-            <div class="visual-top"><span>DOCUMENT / 02</span><span>LEVEL DESIGN</span></div><div class="visual-card-title">赛博朋克 2077<span>「偷货」任务 · 玩法与叙事</span></div><span class="visual-arrow">↗</span>
+            <div class="visual-top"><span>DOCUMENT / 03</span><span>LEVEL DESIGN</span></div><div class="visual-card-title">赛博朋克 2077<span>「偷货」任务 · 玩法与叙事</span></div><span class="visual-arrow">↗</span>
           </a>
           <div class="work-info">
-            <div><span class="work-kicker">关卡拆解 · 玩法与叙事</span><h3>2077「偷货」｜让玩家记住一个角色</h3></div><span class="work-number">02</span>
+            <div><span class="work-kicker">关卡拆解 · 玩法与叙事</span><h3>2077「偷货」｜让玩家记住一个角色</h3></div><span class="work-number">03</span>
             <p>一路同行的细节，让我真的把杰克当作朋友，也让他的死亡成为最难忘的一刻。以「偷货」任务为样本，分析人物塑造、情绪铺垫，以及目标引导与潜行、战斗路径的安排。</p>
             <div class="work-insight"><span>我想理解</span>游戏如何建立同伴感，让一个角色留在玩家的记忆里。</div>
             <div class="tag-row"><span>人物塑造</span><span>情绪节奏</span><span>关卡路径</span></div>
@@ -95,27 +119,14 @@
         <article class="work-card" data-category="system" data-reveal>
           <a class="work-visual visual-work visual-image visual-system" href="https://docs.qq.com/pdf/DSmRoaVdUWG1sek9w" target="_blank" rel="noopener noreferrer" aria-label="打开逆水寒手游角色养成系统拆解案">
             <img class="work-cover-image" src="assets/nishuihan-cover.webp" width="2559" height="1439" alt="逆水寒主题封面：灰蓝色光影中的古装人物侧脸与飞扬的长发" loading="lazy" decoding="async">
-            <div class="visual-top"><span>DOCUMENT / 03</span><span>SYSTEM DESIGN</span></div><div class="visual-card-title">逆水寒手游<span>角色养成 · 简化与取舍</span></div><span class="visual-arrow">↗</span>
+            <div class="visual-top"><span>DOCUMENT / 04</span><span>SYSTEM DESIGN</span></div><div class="visual-card-title">逆水寒手游<span>角色养成 · 简化与取舍</span></div><span class="visual-arrow">↗</span>
           </a>
           <div class="work-info">
-            <div><span class="work-kicker">系统拆解 · 成长体验</span><h3>逆水寒手游｜角色养成的简化与取舍</h3></div><span class="work-number">03</span>
+            <div><span class="work-kicker">系统拆解 · 成长体验</span><h3>逆水寒手游｜角色养成的简化与取舍</h3></div><span class="work-number">04</span>
             <p>从面向年轻玩家的 MMO 体验出发，拆解装备、武功与内功等养成模块，分析保底机制、资源投放与赛季节奏如何降低成长负担，同时讨论长期追求与多赛季重复养成的问题。</p>
             <div class="work-insight"><span>我想理解</span>成长更轻松之后，如何保留搭配深度与新鲜感。</div>
             <div class="tag-row"><span>养成分层</span><span>资源循环</span><span>设计取舍</span></div>
             <a class="work-link" href="https://docs.qq.com/pdf/DSmRoaVdUWG1sek9w" target="_blank" rel="noopener noreferrer">阅读系统拆解 <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-        <article class="work-card" data-category="combat" data-reveal>
-          <a class="work-visual visual-work visual-image visual-action" href="https://docs.qq.com/pdf/DSk5XcUJLbWRxZUxj" target="_blank" rel="noopener noreferrer" aria-label="打开剑星战斗动作拆解文档">
-            <img class="work-cover-image" src="assets/stellar-blade-cover.webp" width="2338" height="1315" alt="剑星主题封面：角色抬手的动作特写，手部姿态与武器映在蓝色光影中" loading="lazy" decoding="async">
-            <div class="visual-top"><span>DOCUMENT / 04</span><span>COMBAT ACTION</span></div><div class="visual-card-title">剑星<span>连锁反击 · 战斗表现与角色塑造</span></div><span class="visual-arrow">↗</span>
-          </a>
-          <div class="work-info">
-            <div><span class="work-kicker">动作拆解 · 战斗表现与角色塑造</span><h3>剑星连锁反击｜从爽快体验到角色魅力</h3></div><span class="work-number">04</span>
-            <p>连锁反击的爽快感与动作特写，让我想进一步理解它的设计。逐帧拆解格挡、反击与追加攻击，分析动作、镜头、视听反馈和操作输入的配合，并从 3C 角度观察角色的战斗表现。</p>
-            <div class="work-insight"><span>我想理解</span>战斗如何在带来操作快感的同时，塑造角色。</div>
-            <div class="tag-row"><span>逐帧拆解</span><span>动作与反馈</span><span>角色塑造</span></div>
-            <a class="work-link" href="https://docs.qq.com/pdf/DSk5XcUJLbWRxZUxj" target="_blank" rel="noopener noreferrer">阅读动作拆解 <span aria-hidden="true">↗</span></a>
           </div>
         </article>
         <article class="work-card" data-category="system" data-reveal>
@@ -142,6 +153,8 @@
             <a class="work-link" href="https://scnn6vtqk3q8.feishu.cn/wiki/JieXwrlGJiWs9MkGaN0c85Ffnpc" target="_blank" rel="noopener noreferrer">浏览系列目录 <span aria-hidden="true">↗</span></a>
           </div>
         </article>
+      </div>
+      </div>
       </div>
     </section>
 

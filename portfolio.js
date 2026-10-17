@@ -44,6 +44,9 @@
             card.classList.add('is-revealed');
           }
         });
+        document.querySelectorAll('[data-work-group]').forEach((group) => {
+          group.hidden = ![...group.querySelectorAll('[data-category]')].some((card) => !card.hidden);
+        });
         filterStatus.textContent = `展示 ${visible} 项作品`;
         queueScrollUpdate();
       });

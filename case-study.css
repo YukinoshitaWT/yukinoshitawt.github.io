@@ -12,6 +12,59 @@
 .case-facts { display: grid; grid-template-columns: repeat(4,1fr); gap: 26px; grid-column: 1/-1; border-block: 1px solid var(--line); padding: 24px 0; margin: 10px 0 0; }
 .case-facts dt { font-size: 9px; color: #91a5b2; letter-spacing: .08em; margin-bottom: 7px; }
 .case-facts dd { margin: 0; font-size: 12px; color: #57758a; }
+.sword-controls { padding-top: 86px; scroll-margin-top: 110px; }
+.sword-controls .sword-control-layout { display: grid; grid-template-columns: 1.15fr 1fr; gap: 44px; align-items: center; }
+.sword-controls .sword-control-figure { margin: 0; padding: 23px 26px 20px; border: 1px solid #cddce4; border-radius: 14px; background: radial-gradient(ellipse at 50% 45%,#e8f0f4,transparent 70%),#fafcfb; min-width: 0; }
+.sword-controls .sword-control-mode { display: flex; justify-content: space-between; align-items: center; gap: 18px; color: #6b8798; font-size: 10px; }
+.sword-controls .sword-control-mode>span:first-child { display: inline-flex; align-items: center; gap: 10px; }
+.sword-controls .sword-control-mode>span:last-child { font: 8px var(--mono); letter-spacing: .1em; color: #9bafb9; }
+.sword-controls kbd { display: inline-block; padding: 5px 9px; border: 1px solid #bfcfd8; border-bottom-width: 3px; border-radius: 5px; background: #f8fbfc; color: #486c83; font: 11px var(--mono); }
+.sword-controls .sword-control-diagram { display: block; width: 100%; height: auto; margin: 24px 0 17px; overflow: visible; }
+.sword-controls .control-plane { fill: #edf3f5; stroke: #bdcfd9; stroke-width: 1.4; }
+.sword-controls .control-grid { fill: none; stroke: #d2dfe6; stroke-width: 1; }
+.sword-controls .control-camera-sight { fill: none; stroke: #bfd0db; stroke-width: 1.3; stroke-dasharray: 4 7; }
+.sword-controls .control-camera { fill: #f7fafb; stroke: #819eaf; stroke-width: 1.8; stroke-linejoin: round; }
+.sword-controls .control-character ellipse { fill: #cfdee6; opacity: .65; }
+.sword-controls .control-character circle { fill: #91acbc; }
+.sword-controls .control-character path { fill: #d2e1e9; stroke: #829fb1; stroke-width: 1.5; }
+.sword-controls .control-move { fill: none; stroke: #658da5; color: #658da5; stroke-width: 1.8; }
+.sword-controls .control-height { fill: none; stroke: #ae9273; color: #ae9273; stroke-width: 1.7; stroke-dasharray: 4 4; }
+.sword-controls .control-flying-sword { fill: #d2e3eb; stroke: #577e97; stroke-width: 2; stroke-linejoin: round; }
+.sword-controls .control-label { font: 17px var(--sans); fill: #63859a; }
+.sword-controls .control-label-muted { font-size: 15px; fill: #8aa2b0; }
+.sword-controls .control-label-warm { fill: #a28b72; font-size: 15px; }
+.sword-controls .sword-control-figure figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: #8da3b0; font-size: 9px; line-height: 1.8; }
+.sword-controls .sword-control-legend { display: inline-flex; align-items: center; gap: 7px; }
+.sword-controls .sword-control-legend i { width: 7px; height: 7px; border-radius: 50%; background: #789eb4; display: inline-block; }
+.sword-controls .sword-control-legend i:nth-of-type(2) { background: #b29b80; margin-left: 8px; }
+.sword-controls .sword-control-steps { border-top: 1px solid var(--line); }
+.sword-controls .sword-control-steps article { display: grid; grid-template-columns: 27px 1fr; gap: 15px; padding: 25px 0; border-bottom: 1px solid var(--line); }
+.sword-controls .sword-control-number { color: #96acb9; font: 10px/2 var(--mono); padding-top: 3px; }
+.sword-controls .sword-control-steps h3 { font-size: 16px; font-weight: 500; line-height: 1.8; margin-bottom: 8px; }
+.sword-controls .sword-control-steps p { color: var(--muted); font-size: 13px; line-height: 2.05; text-wrap: pretty; }
+@media(max-width:1050px) {
+  .sword-controls .sword-control-layout { gap: 28px; grid-template-columns: 1.05fr 1fr; }
+  .sword-controls .sword-control-figure { padding-inline: 18px; }
+  .sword-controls .sword-control-mode>span:last-child { display: none; }
+}
+@media(max-width:800px) {
+  .sword-controls { padding-top: 67px; }
+  .sword-controls .sword-control-layout { grid-template-columns: 1fr; gap: 28px; }
+  .sword-controls .sword-control-diagram { max-width: 590px; margin-inline: auto; }
+  .sword-controls .sword-control-mode>span:last-child { display: inline; }
+  .sword-controls .sword-control-steps article { padding-block: 22px; }
+}
+@media(max-width:560px) {
+  .sword-controls { padding-top: 58px; }
+  .sword-controls .sword-control-figure { padding: 18px 13px 17px; }
+  .sword-controls .sword-control-mode { font-size: 10px; gap: 10px; }
+  .sword-controls .sword-control-mode>span:last-child { font-size: 7px; letter-spacing: .05em; }
+  .sword-controls .sword-control-diagram { margin-block: 20px 13px; }
+  .sword-controls .sword-control-figure figcaption { font-size: 8px; gap: 8px; }
+  .sword-controls .sword-control-steps article { grid-template-columns: 23px 1fr; gap: 12px; padding-block: 21px; }
+  .sword-controls .sword-control-steps h3 { font-size: 16px; }
+  .sword-controls .sword-control-steps p { font-size: 12px; }
+}
 .case-section { padding-block: 88px; }
 .case-section-head { display: flex; justify-content: space-between; align-items: end; gap: 50px; margin-bottom: 34px; }
 .case-section-head h2 { font-size: 35px; line-height: 1.65; margin-top: 19px; }
